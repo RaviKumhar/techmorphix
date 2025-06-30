@@ -294,3 +294,136 @@ function monitorPerformance() {
 
 // Initialize performance monitoring
 monitorPerformance();
+
+// Enhanced User Experience Features
+function initializeEnhancedUX() {
+    // Add smooth scrolling to all anchor links
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Preload critical images
+    preloadCriticalImages();
+    
+    // Add interactive hover effects
+    addInteractiveEffects();
+    
+    // Initialize accessibility enhancements
+    initializeAccessibility();
+    
+    // Add page transition effects
+    addPageTransitions();
+}
+
+// Preload critical images for better performance
+function preloadCriticalImages() {
+    const criticalImages = [
+        'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop'
+    ];
+    
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// Add interactive effects to cards and buttons
+function addInteractiveEffects() {
+    const cards = document.querySelectorAll('.service-card, .ai-tech-card');
+    cards.forEach(card => {
+        card.classList.add('enhanced-hover', 'interactive-card');
+        
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// Accessibility enhancements
+function initializeAccessibility() {
+    // Add skip links
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only sr-only-focusable btn btn-primary';
+    skipLink.style.position = 'absolute';
+    skipLink.style.top = '10px';
+    skipLink.style.left = '10px';
+    skipLink.style.zIndex = '9999';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+    
+    // Add ARIA labels to interactive elements
+    const buttons = document.querySelectorAll('button:not([aria-label])');
+    buttons.forEach(button => {
+        if (button.textContent.trim()) {
+            button.setAttribute('aria-label', button.textContent.trim());
+        }
+    });
+    
+    // Improve focus management
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+            document.body.classList.add('using-keyboard');
+        }
+    });
+    
+    document.addEventListener('mousedown', function() {
+        document.body.classList.remove('using-keyboard');
+    });
+}
+
+// Add page transition effects
+function addPageTransitions() {
+    // Fade in page content on load
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease-in-out';
+    
+    window.addEventListener('load', function() {
+        document.body.style.opacity = '1';
+    });
+    
+    // Add exit transitions for navigation
+    const navLinks = document.querySelectorAll('a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.hostname === window.location.hostname) {
+                e.preventDefault();
+                const href = this.href;
+                
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            }
+        });
+    });
+}
+
+// Initialize enhanced UX features
+document.addEventListener('DOMContentLoaded', function() {
+    initializeEnhancedUX();
+});
+
+// Add performance monitoring for Core Web Vitals
+function monitorCoreWebVitals() {
+    // Largest Contentful Paint (LCP)
+    new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+            console.log('LCP:', entry.startTime);
+        }
+    }).observe({entryTypes: ['largest-contentful-paint']});
+    
+    // First Input Delay (FID)
+    new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+            console.log('FID:', entry.processingStart - entry.startTime);
+        }
+    }).observe({entryTypes: ['first-input']});
+}
+
+// Initialize Core Web Vitals monitoring
+if ('PerformanceObserver' in window) {
+    monitorCoreWebVitals();
+}
