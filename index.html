@@ -50,34 +50,102 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-overlay">
+            <!-- Floating particles background -->
+            <div class="particles-background">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
             <div class="container">
                 <div class="row align-items-center min-vh-100">
                     <div class="col-lg-6">
-                        <h1 class="display-4 fw-bold text-white mb-4">We Solve Complex IT Challenges for Global Businesses</h1>
-                        <p class="lead text-white mb-4">Transform your business with cutting-edge technology solutions. Our expert team delivers cybersecurity, cloud infrastructure, and application development services that drive results.</p>
-                        <div class="d-flex flex-wrap gap-3">
-                            <a href="contact.html" class="btn btn-light btn-lg">Get Free Consultation</a>
-                            <a href="services.html" class="btn btn-outline-light btn-lg">Our Services</a>
+                        <h1 class="display-4 fw-bold text-white mb-4 typing-animation">We Solve Complex IT Challenges for Global Businesses</h1>
+                        <p class="lead text-white mb-4 fade-in-up-delayed">Transform your business with cutting-edge technology solutions. Our expert team delivers cybersecurity, cloud infrastructure, and application development services that drive results.</p>
+                        <div class="d-flex flex-wrap gap-3 slide-in-left">
+                            <a href="contact.html" class="btn btn-light btn-lg pulse-glow">Get Free Consultation</a>
+                            <a href="services.html" class="btn btn-outline-light btn-lg hover-effect">Our Services</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="hero-stats bg-white rounded-4 p-4 shadow">
+                        <!-- Interactive Tech Visualization -->
+                        <div class="tech-visualization">
+                            <div class="central-hub">
+                                <i class="fas fa-microchip fa-3x text-white"></i>
+                            </div>
+                            <div class="orbit orbit-1">
+                                <div class="orbit-item" data-tooltip="Cloud Computing">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-2">
+                                <div class="orbit-item" data-tooltip="Cybersecurity">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-3">
+                                <div class="orbit-item" data-tooltip="AI & Analytics">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-4">
+                                <div class="orbit-item" data-tooltip="Mobile Apps">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Animated Stats -->
+                        <div class="hero-stats bg-white rounded-4 p-4 shadow stats-section mt-4">
                             <div class="row text-center">
                                 <div class="col-4">
-                                    <h3 class="text-primary fw-bold">15+</h3>
+                                    <h3 class="text-primary fw-bold counter" data-target="15">0</h3>
                                     <p class="mb-0">Years Experience</p>
                                 </div>
                                 <div class="col-4">
-                                    <h3 class="text-primary fw-bold">150+</h3>
+                                    <h3 class="text-primary fw-bold counter" data-target="150">0</h3>
                                     <p class="mb-0">IT Professionals</p>
                                 </div>
                                 <div class="col-4">
-                                    <h3 class="text-primary fw-bold">500+</h3>
+                                    <h3 class="text-primary fw-bold counter" data-target="500">0</h3>
                                     <p class="mb-0">Successful Projects</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Showcase -->
+    <section class="py-5 tech-showcase-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3 gradient-text">Future-Ready Technology Solutions</h2>
+                    <p class="lead text-muted">Powered by cutting-edge AI, cloud computing, and advanced security protocols</p>
+                </div>
+            </div>
+            
+            <!-- Floating Tech Icons -->
+            <div class="floating-tech-icons">
+                <div class="tech-icon-float" style="top: 10%; left: 10%;">
+                    <i class="fab fa-aws text-warning"></i>
+                </div>
+                <div class="tech-icon-float" style="top: 20%; right: 15%;">
+                    <i class="fab fa-microsoft text-primary"></i>
+                </div>
+                <div class="tech-icon-float" style="bottom: 30%; left: 5%;">
+                    <i class="fab fa-google text-danger"></i>
+                </div>
+                <div class="tech-icon-float" style="bottom: 10%; right: 10%;">
+                    <i class="fab fa-docker text-info"></i>
                 </div>
             </div>
         </div>
