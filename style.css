@@ -128,6 +128,178 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
+/* AI & Futuristic Styling */
+.ai-gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.automation-gradient-bg {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.data-gradient-bg {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.mobile-gradient-bg {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+/* AI Service Card Styling */
+.ai-service-card {
+    background: linear-gradient(145deg, #ffffff, #f0f8ff);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    pointer-events: none;
+}
+
+/* AI Pulse Animation */
+.ai-pulse {
+    animation: aiPulse 2s ease-in-out infinite;
+}
+
+@keyframes aiPulse {
+    0% {
+        transform: scale(1);
+        color: var(--primary-color);
+    }
+    50% {
+        transform: scale(1.1);
+        color: #8b5cf6;
+    }
+    100% {
+        transform: scale(1);
+        color: var(--primary-color);
+    }
+}
+
+/* AI Float Animation */
+.ai-float {
+    animation: aiFloat 6s ease-in-out infinite;
+}
+
+@keyframes aiFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+        transform: translateY(5px) rotate(-1deg);
+    }
+}
+
+/* Technology Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-2px);
+}
+
+.tech-item i {
+    font-size: 1.5rem;
+}
+
+/* Tech Badges */
+.tech-badges {
+    margin-top: 1rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+}
+
+/* AI Technology Cards */
+.ai-tech-card {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-tech-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: conic-gradient(from 0deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+    animation: spin 8s linear infinite;
+    pointer-events: none;
+}
+
+.ai-tech-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Industry Cards */
+.industry-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.industry-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(37, 99, 235, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1rem;
+    pointer-events: none;
+}
+
+.industry-card:hover::after {
+    opacity: 1;
+}
+
+.industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
 /* Enhanced Futuristic Animations */
 @keyframes fadeInUp {
     from {
@@ -543,13 +715,316 @@ body {
     }
 }
 
+/* Holographic Effects */
+.holographic-card {
+    background: linear-gradient(45deg, 
+        rgba(255,255,255,0.1) 0%, 
+        rgba(255,255,255,0.05) 50%, 
+        rgba(255,255,255,0.1) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(255,255,255,0.1) 50%, 
+        transparent 70%);
+    transform: rotate(45deg);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* Neon Glow Effects */
+.neon-glow {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    }
+    to {
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    }
+}
+
+/* Futuristic Buttons */
+.btn-futuristic {
+    background: linear-gradient(45deg, var(--primary-color), #8b5cf6);
+    border: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-futuristic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-futuristic:hover::before {
+    left: 100%;
+}
+
+.btn-futuristic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* Modern Tech Logos Animation */
+.tech-logo {
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.tech-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Cyberpunk Grid */
+.cyber-grid {
+    background-image: 
+        linear-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
+}
+
+/* AI Visualization Enhancements */
+.ai-node {
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, var(--primary-color), #8b5cf6);
+    border-radius: 50%;
+    position: absolute;
+    animation: nodeFloat 3s ease-in-out infinite;
+}
+
+@keyframes nodeFloat {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Code Block Styling */
+.code-block {
+    background: #1a1a1a;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), #00ff41, var(--primary-color));
+    animation: codeScroll 2s linear infinite;
+}
+
+@keyframes codeScroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Futuristic Progress Bars */
+.progress-futuristic {
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-futuristic .progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), #00ff41);
+    animation: progressGlow 2s ease-in-out infinite;
+}
+
+@keyframes progressGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px currentColor;
+    }
+    50% {
+        box-shadow: 0 0 20px currentColor;
+    }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.matrix-char {
+    position: absolute;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    animation: matrixFall 3s linear infinite;
+}
+
+@keyframes matrixFall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Technology Showcase Styling */
+.tech-category-card {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.tech-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(45deg, var(--primary-color), rgba(37, 99, 235, 0.8));
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3);
+}
+
+.bg-purple {
+    background-color: #8b5cf6 !important;
+}
+
+/* Service Feature Cards */
+.service-feature {
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Enhanced Dropdown Styling */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin: 2px 4px;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(45deg, var(--primary-color), rgba(37, 99, 235, 0.8));
+    color: white;
+    transform: translateX(5px);
+}
+
+.dropdown-header {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
 /* Performance Optimizations */
 @media (prefers-reduced-motion: reduce) {
     .typing-animation,
     .particles-background,
     .tech-visualization,
     .pulse-glow,
-    .gradient-text {
+    .gradient-text,
+    .ai-pulse,
+    .shimmer,
+    .neon-glow {
         animation: none;
     }
 }
